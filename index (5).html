@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bash The Computer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <p class="credit">Html created by Jaydenn</p>
+  <main class="page-shell">
+    <section class="title-panel">
+      <img class="title-image" src="assets/00_A.png" alt="Bash The Computer" />
+      <p class="subtitle">Click the broken computer parts to bash them. Repair to reset the game.</p>
+    </section>
+
+    <section class="game-panel">
+      <div class="game-scene">
+        <img class="scene-image" src="assets/00_B.png" alt="Bash the computer gameplay scene" />
+
+        <button class="hotspot hotspot-tower" data-part="tower" aria-label="Bash the tower"></button>
+        <button class="hotspot hotspot-monitor" data-part="monitor" aria-label="Bash the monitor"></button>
+        <button class="hotspot hotspot-keyboard" data-part="keyboard" aria-label="Bash the keyboard"></button>
+        <button class="hotspot hotspot-mouse" data-part="mouse" aria-label="Bash the mouse"></button>
+      </div>
+
+      <aside class="status-panel">
+        <div class="status-box">
+          <span class="label">HITS</span>
+          <span id="hits">0</span>
+        </div>
+        <div class="status-box">
+          <span class="label">TOTAL HITS</span>
+          <span id="total-hits">0</span>
+        </div>
+        <button id="repair-button" class="repair-button" type="button">REPAIR</button>
+        <div id="game-message" class="game-message">Choose a computer part and bash it!</div>
+      </aside>
+    </section>
+  </main>
+
+  <style>
+    .credit {
+      color: #aaa;
+      font-size: 0.9em;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>

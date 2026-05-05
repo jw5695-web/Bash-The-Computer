@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bash The Computer — Original Archive Release</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/@ruffle-rs/ruffle@0.2.0/dist/ruffle.js"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="title-panel">
+      <h1>Bash The Computer</h1>
+      <p class="subtitle">Play the original title screen, cutscenes, animations, and damage physics from the archive.org release.</p>
+      <p class="archive-credit">Original SWF sourced from <a href="https://archive.org/details/bash-the-computer" target="_blank" rel="noopener">archive.org</a>.</p>
+    </section>
+
+    <section class="instructions-panel">
+      <div class="instructions">
+        <h2>How to play</h2>
+        <p>Use the original on-screen controls and keyboard inputs in the emulated Flash game. The archive version preserves the classic title screen, damage physics, cutscenes, and animations.</p>
+        <ul>
+          <li>Start from the original title screen.</li>
+          <li>Enjoy authentic cutscenes and damage effects.</li>
+          <li>Repair and retry inside the vintage game.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flash-panel">
+      <div class="flash-container">
+        <div id="ruffle-container"></div>
+        <noscript>
+          <p class="fallback">JavaScript is required to run the original SWF via Ruffle.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener('load', function () {
+      if (window.RufflePlayer) {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        player.style.width = '100%';
+        player.style.height = '100%';
+        const container = document.getElementById('ruffle-container');
+        container.innerHTML = '';
+        container.appendChild(player);
+        player.load('assets/bash-the-computer.swf');
+      }
+    });
+  </script>
+</body>
+</html>
